@@ -47,6 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: upper-deploy-group
+      cancel-in-progress: true
     steps:
       - name: Run a multi-line script
         run: |
