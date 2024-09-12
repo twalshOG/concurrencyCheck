@@ -46,7 +46,7 @@ jobs:
     environment: upper
     runs-on: ubuntu-latest
     concurrency:
-      group: lower-deploy-group
+      group: upper-deploy-group
     steps:
       - name: Run a multi-line script
         run: |
