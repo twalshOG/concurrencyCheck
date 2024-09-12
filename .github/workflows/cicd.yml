@@ -50,6 +50,9 @@ jobs:
       group: upper-deploy-group
       cancel-in-progress: true
     steps:
+      - name: Fake deploy
+        id: deploy
+        run: echo DEPLOYED
       - name: Run a multi-line script
         run: |
           echo Deploy to upper
@@ -62,4 +65,8 @@ jobs:
         run: |
           echo Deploy to upper
           sleep 10s
+      - name: Record deployed
+        if: ${{ always() && steps.deploy.outcome == 'success' }}
+        run: |
+          echo DEPLYED RECORD
     
