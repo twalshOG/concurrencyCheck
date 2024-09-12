@@ -39,6 +39,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Deploy to lower
+          sleep 10s
 
   deploy-upper:
     name: Deploy to upper
@@ -52,4 +53,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Deploy to upper
+          sleep 10s
     
